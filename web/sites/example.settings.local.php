@@ -141,3 +141,8 @@ $config['config_split.config_split.local']['status'] = true;
 $config['config_split.config_split.dev']['status'] = true;
 $config['config_split.config_split.stage']['status'] = false;
 $config['config_split.config_split.prod']['status'] = false;
+
+/**
+ * Custom config split to export agile module config files. 
+ */
+$config['config_split.config_split.agile']['status'] = false;

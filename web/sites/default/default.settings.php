@@ -750,6 +750,21 @@ $settings['file_scan_ignore_directories'] = [
   'bower_components',
 ];
 
+
+/**
+ * Set default settings before include settings.local.php
+ */
+
+ $settings['install_profile'] = 'config_installer';
+
+$config_directories['sync'] = '../config/sync';
+
+$config['config_split.config_split.agile']['status'] = false;
+$config['config_split.config_split.local']['status'] = true;
+$config['config_split.config_split.dev']['status'] = true;
+$config['config_split.config_split.stage']['status'] = false;
+$config['config_split.config_split.prod']['status'] = false;
+
 /**
  * Load local development override configuration, if available.
  *
