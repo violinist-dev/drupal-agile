@@ -1,0 +1,17 @@
+uuid: 71797667-fdb8-48f1-a092-8ce9bd6d858a
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Projects
+type: project
+description: 'A top-level group of issues, content and user.'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: true
