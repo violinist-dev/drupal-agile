@@ -1,6 +1,9 @@
+uuid: 19ccd226-c4f6-4524-8940-efc34c81833e
 langcode: en
 status: true
 dependencies: {  }
+_core:
+  default_config_hash: cjJ2cPbgNB-LoR4W6OrYV5tKNoDO-QAZZgoUP8G6oDc
 name: 'Project types'
 vid: project_type
 description: 'Types of your projects.'
