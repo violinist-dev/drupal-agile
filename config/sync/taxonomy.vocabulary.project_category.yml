@@ -1,0 +1,9 @@
+uuid: 02ee3d79-ffdf-437f-90ad-2a59647325e3
+langcode: en
+status: true
+dependencies: {  }
+name: 'Project categories'
+vid: project_category
+description: 'Categories of your projects.'
+hierarchy: 0
+weight: -8
