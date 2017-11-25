@@ -1,0 +1,9 @@
+name: 'Agile'
+type: module
+description: 'Plan, track and manage your agile project in Drupal.'
+core: 8.x
+package: Agile
+dependencies:
+  - drupal:user
+  - drupal:node
+  - drupal:taxonomy

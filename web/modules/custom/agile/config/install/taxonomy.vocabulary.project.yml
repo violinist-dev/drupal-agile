@@ -1,0 +1,9 @@
+uuid: a4931149-e19b-493a-bf6e-5b1e7f7dd4a3
+langcode: en
+status: true
+dependencies: {  }
+name: Projects
+vid: project
+description: 'Projects is a top-level group of tasks and users. '
+hierarchy: 0
+weight: -10
