@@ -1,9 +1,9 @@
 # Site config.
 site:
-  name: "Drupal site name"
-  slogan: "Website slogan." # optional
+  name: "Drupal Agile"
+  slogan: "Plan, track and manage your agile project in Drupal."
   mail: "admin@email.com" 
-  uuid: 11111111-1111-1111-1111-11111111111a # optional
+  # uuid: 11111111-1111-1111-1111-11111111111a
 # Admin account
 account:
   name: drupal
