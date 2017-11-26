@@ -1,0 +1,9 @@
+uuid: d559b8c1-7abb-44ac-a736-5c991b56fb24
+langcode: en
+status: true
+dependencies: {  }
+name: 'Issue types'
+vid: issue_type
+description: 'Type of your issues.'
+hierarchy: 0
+weight: 0

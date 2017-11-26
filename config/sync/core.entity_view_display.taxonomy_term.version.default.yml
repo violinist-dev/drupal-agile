@@ -13,15 +13,15 @@ bundle: version
 mode: default
 content:
   description:
-    label: hidden
+    label: inline
     type: text_default
-    weight: 0
+    weight: 1
     region: content
     settings: {  }
     third_party_settings: {  }
   field_version:
-    weight: 1
-    label: above
+    weight: 0
+    label: inline
     settings:
       thousand_separator: ''
       decimal_separator: .

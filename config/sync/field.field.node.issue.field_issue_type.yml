@@ -1,28 +1,29 @@
-uuid: b32b8692-0dc2-41a0-9a71-7f2a245390f9
+uuid: a93c3782-7a43-49e9-8a35-07f0cf22561d
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_project
+    - field.storage.node.field_issue_type
     - node.type.issue
-    - node.type.project
-id: node.issue.field_project
-field_name: field_project
+    - taxonomy.vocabulary.issue_type
+id: node.issue.field_issue_type
+field_name: field_issue_type
 entity_type: node
 bundle: issue
-label: Project
+label: Type
 description: ''
 required: true
 translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
-  handler: 'default:node'
+  handler: 'default:taxonomy_term'
   handler_settings:
     target_bundles:
-      project: project
+      issue_type: issue_type
     sort:
-      field: _none
+      field: name
+      direction: asc
     auto_create: false
     auto_create_bundle: ''
 field_type: entity_reference

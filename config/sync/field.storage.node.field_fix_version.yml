@@ -1,15 +1,16 @@
-uuid: a0d9ff2e-7977-4d72-9332-89a573ac49fc
+uuid: 510face5-5d55-49e1-b341-eb78ea81bdf6
 langcode: en
 status: true
 dependencies:
   module:
     - node
-id: node.field_project
-field_name: field_project
+    - taxonomy
+id: node.field_fix_version
+field_name: field_fix_version
 entity_type: node
 type: entity_reference
 settings:
-  target_type: node
+  target_type: taxonomy_term
 module: core
 locked: false
 cardinality: 1
