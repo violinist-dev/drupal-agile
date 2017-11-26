@@ -1,0 +1,26 @@
+uuid: 2c27603d-9b65-439f-a7a4-57a22a04aed1
+langcode: en
+status: true
+dependencies:
+  config:
+    - comment.type.issue_thread
+    - field.field.comment.issue_thread.comment_body
+  module:
+    - text
+id: comment.issue_thread.default
+targetEntityType: comment
+bundle: issue_thread
+mode: default
+content:
+  comment_body:
+    label: hidden
+    type: text_default
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden:
+  langcode: true

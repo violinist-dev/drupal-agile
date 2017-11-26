@@ -3,12 +3,17 @@ langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_display.comment.issue_thread.default
     - field.field.node.issue.body
+    - field.field.node.issue.field_assignee
+    - field.field.node.issue.field_attachments
+    - field.field.node.issue.field_comments
     - field.field.node.issue.field_fix_version
     - field.field.node.issue.field_issue_type
     - field.field.node.issue.field_project
     - node.type.issue
   module:
+    - comment
     - text
     - user
 id: node.issue.default
@@ -17,11 +22,36 @@ bundle: issue
 mode: default
 content:
   body:
-    label: hidden
+    label: above
     type: text_default
-    weight: 3
+    weight: 4
     settings: {  }
     third_party_settings: {  }
+    region: content
+  field_assignee:
+    weight: 3
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_attachments:
+    weight: 5
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_comments:
+    weight: 6
+    label: above
+    settings:
+      view_mode: default
+      pager_id: 0
+    third_party_settings: {  }
+    type: comment_default
     region: content
   field_fix_version:
     weight: 2
@@ -48,7 +78,7 @@ content:
     type: entity_reference_label
     region: content
   links:
-    weight: 4
+    weight: 7
     region: content
     settings: {  }
     third_party_settings: {  }
