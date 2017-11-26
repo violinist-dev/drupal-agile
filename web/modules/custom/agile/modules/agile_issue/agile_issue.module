@@ -1,0 +1,58 @@
+<?php
+
+/**
+ * @file
+ * Contains agile_issue.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function agile_issue_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the agile_issue module.
+    case 'help.page.agile_issue':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function agile_issue_theme() {
+  $theme = [];
+  $theme['issue'] = [
+    'render element' => 'elements',
+    'file' => 'issue.page.inc',
+    'template' => 'issue',
+  ];
+  $theme['issue_content_add_list'] = [
+    'render element' => 'content',
+    'variables' => ['content' => NULL],
+    'file' => 'issue.page.inc',
+  ];
+  return $theme;
+}
+
+/**
+* Implements hook_theme_suggestions_HOOK().
+*/
+function agile_issue_theme_suggestions_issue(array $variables) {
+  $suggestions = [];
+  $entity = $variables['elements']['#issue'];
+  $sanitized_view_mode = strtr($variables['elements']['#view_mode'], '.', '_');
+
+  $suggestions[] = 'issue__' . $sanitized_view_mode;
+  $suggestions[] = 'issue__' . $entity->bundle();
+  $suggestions[] = 'issue__' . $entity->bundle() . '__' . $sanitized_view_mode;
+  $suggestions[] = 'issue__' . $entity->id();
+  $suggestions[] = 'issue__' . $entity->id() . '__' . $sanitized_view_mode;
+  return $suggestions;
+}

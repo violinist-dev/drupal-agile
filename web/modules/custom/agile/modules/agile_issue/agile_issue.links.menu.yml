@@ -1,0 +1,18 @@
+
+# Issue menu items definition
+entity.issue.collection:
+  title: 'Issue list'
+  route_name: entity.issue.collection
+  description: 'List Issue entities'
+  parent: system.admin_structure
+  weight: 100
+
+
+# Issue type menu items definition
+entity.issue_type.collection:
+  title: 'Issue type'
+  route_name: entity.issue_type.collection
+  description: 'List Issue type (bundles)'
+  parent: system.admin_structure
+  weight: 99
+
