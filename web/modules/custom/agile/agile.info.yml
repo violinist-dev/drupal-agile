@@ -5,6 +5,7 @@ core: 8.x
 package: Agile
 dependencies:
   - drupal:user
+  - drupal:media
   - drupal:node
   - drupal:taxonomy
   - drupal:views
