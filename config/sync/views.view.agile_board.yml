@@ -606,6 +606,7 @@ display:
           entity_type: node
           entity_field: type
           plugin_id: bundle
+          group: 1
         field_issue_type_target_id:
           id: field_issue_type_target_id
           table: node__field_issue_type
@@ -679,7 +680,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          default_action: empty
+          default_action: ignore
           exception:
             value: all
             title_enable: true
@@ -710,6 +711,10 @@ display:
           plugin_id: numeric
       display_extenders: {  }
       use_ajax: true
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
     cache_metadata:
       max-age: 0
       contexts:
@@ -734,14 +739,14 @@ display:
       title: Backlog
       defaults:
         title: false
-      path: board
+      path: node/%node/board
       menu:
         type: tab
         title: Board
         description: ''
         expanded: false
         parent: ''
-        weight: 0
+        weight: 10
         context: '0'
         menu_name: agile-board
       tab_options:
@@ -749,6 +754,7 @@ display:
         title: 'Agile Board'
         description: ''
         weight: 0
+      exposed_block: false
     cache_metadata:
       max-age: 0
       contexts:
