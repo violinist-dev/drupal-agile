@@ -1,4 +1,4 @@
-uuid: 1466aa35-dac3-4fbc-8f00-a2c0cb9cce40
+uuid: 7b0c1d39-7f7d-448e-ae0c-3c6f5e55ac2a
 langcode: en
 status: true
 dependencies:
@@ -12,7 +12,7 @@ dependencies:
     - node
     - taxonomy
     - user
-id: board
+id: agile_board
 label: 'Agile Board'
 module: views
 description: 'Filterable list of issues and other useful board for project management.'
@@ -734,16 +734,16 @@ display:
       title: Backlog
       defaults:
         title: false
-      path: board/%node
+      path: board
       menu:
-        type: none
+        type: tab
         title: Board
         description: ''
         expanded: false
         parent: ''
         weight: 0
         context: '0'
-        menu_name: main
+        menu_name: agile-board
       tab_options:
         type: tab
         title: 'Agile Board'
