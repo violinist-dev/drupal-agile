@@ -3,6 +3,7 @@ module:
   agile_issue: 0
   agile_project: 0
   block: 0
+  breakpoint: 0
   dblog: 0
   dynamic_page_cache: 0
   field: 0
@@ -15,12 +16,16 @@ module:
   system: 0
   taxonomy: 0
   text: 0
+  toolbar: 0
   update: 0
   user: 0
   views: 10
   minimal: 1000
 theme:
   stark: 0
+  stable: 0
+  classy: 0
+  seven: 0
 profile: minimal
 _core:
   default_config_hash: R4IF-ClDHXxblLcG0L7MgsLvfBIMAvi_skumNFQwkDc
