@@ -1,0 +1,19 @@
+
+/**
+ * Main menu icons.
+ */
+#toolbar-link-view-projects-projects:before {
+  background-color: #bebebe;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-origin: content-box;
+  -webkit-mask-position: center;
+  -webkit-mask-image: url(../images/house.svg);
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-origin: content-box;
+  mask-image: url(../images/house.svg);
+}
+#toolbar-link-view-projects-projects:active:before,
+#toolbar-link-view-projects-projects.is-active:before {
+  background-color: #000000;
+}

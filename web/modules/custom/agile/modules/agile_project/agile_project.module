@@ -56,3 +56,10 @@ function agile_project_theme_suggestions_project(array $variables) {
   $suggestions[] = 'project__' . $entity->id() . '__' . $sanitized_view_mode;
   return $suggestions;
 }
+
+/**
+ * Implements hook_toolbar_alter().
+ */
+function agile_project_toolbar_alter(&$items) {
+  $items['administration']['#attached']['library'][] = 'agile_project/toolbar';
+}
