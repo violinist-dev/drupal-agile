@@ -1,0 +1,10 @@
+type: module
+name: 'Agile - Default content'
+description: 'Starter kit for your Agile workflow.'
+core: 8.x
+package: Agile
+dependencies:
+  - drupal:user
+  - drupal:node
+  - drupal:taxonomy
+  - drupal:views

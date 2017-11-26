@@ -1,8 +1,0 @@
-uuid: 4bd98414-e3d6-4dff-bf77-df760ea18efe
-langcode: en
-status: true
-dependencies: {  }
-id: issue_thread
-label: 'Issue thread'
-target_entity_type_id: node
-description: 'Comments about an Issue.'

@@ -1,7 +1,7 @@
-uuid: afe59502-699e-4dc8-991d-a6d4f5a1a2f9
-name: 'Drupal Agile'
-mail: m@matthieuscarset.com
-slogan: 'Plan, track and manage your agile project in Drupal.'
+uuid: b2e7433d-5f9f-42ab-8ddc-0d042b910b74
+name: Site-Install
+mail: admin@example.com
+slogan: ''
 page:
   403: ''
   404: ''

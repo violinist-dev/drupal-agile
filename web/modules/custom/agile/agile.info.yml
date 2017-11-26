@@ -8,3 +8,5 @@ dependencies:
   - drupal:node
   - drupal:taxonomy
   - drupal:views
+  - agile:agile_project
+  - agile:agile_issue
