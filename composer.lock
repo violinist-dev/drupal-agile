@@ -1565,17 +1565,17 @@
         },
         {
             "name": "drupal/default_content_extra",
-            "version": "1.0.0-beta4",
+            "version": "1.0.0-beta5",
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/default_content_extra",
-                "reference": "8.x-1.0-beta4"
+                "reference": "8.x-1.0-beta5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/default_content_extra-8.x-1.0-beta4.zip",
-                "reference": "8.x-1.0-beta4",
-                "shasum": "11f163bade8dc84f1eaeb437aa9c5394dfa1d487"
+                "url": "https://ftp.drupal.org/files/projects/default_content_extra-8.x-1.0-beta5.zip",
+                "reference": "8.x-1.0-beta5",
+                "shasum": "7cf76c4cf09467bd8d8bb4bd0e2d202466f0a018"
             },
             "require": {
                 "drupal/core": "~8.0",
@@ -1587,8 +1587,8 @@
                     "dev-1.x": "1.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-1.0-beta4",
-                    "datestamp": "1508256544",
+                    "version": "8.x-1.0-beta5",
+                    "datestamp": "1513804684",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Project has not opted into security advisory coverage!"
@@ -1607,6 +1607,10 @@
                 {
                     "name": "dixon_",
                     "homepage": "https://www.drupal.org/user/239911"
+                },
+                {
+                    "name": "timmillwood",
+                    "homepage": "https://www.drupal.org/user/227849"
                 }
             ],
             "description": "Extra experimental functionality to enhance Default Content.",
