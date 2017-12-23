@@ -1588,7 +1588,7 @@
                 },
                 "drupal": {
                     "version": "8.x-1.0-beta4",
-                    "datestamp": "1508256544",
+                    "datestamp": "1513804684",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Project has not opted into security advisory coverage!"
@@ -1607,6 +1607,10 @@
                 {
                     "name": "dixon_",
                     "homepage": "https://www.drupal.org/user/239911"
+                },
+                {
+                    "name": "timmillwood",
+                    "homepage": "https://www.drupal.org/user/227849"
                 }
             ],
             "description": "Extra experimental functionality to enhance Default Content.",
