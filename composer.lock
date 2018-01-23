@@ -2099,17 +2099,17 @@
         },
         {
             "name": "drupal/svg_image",
-            "version": "1.7.0",
+            "version": "1.8.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/svg_image",
-                "reference": "8.x-1.7"
+                "reference": "8.x-1.8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/svg_image-8.x-1.7.zip",
-                "reference": "8.x-1.7",
-                "shasum": "3600a6d79b9232277d36aa68862f6f541bfb5c22"
+                "url": "https://ftp.drupal.org/files/projects/svg_image-8.x-1.8.zip",
+                "reference": "8.x-1.8",
+                "shasum": "d1378ab1552dcc386e0b3ee65c3a441ee0407f8f"
             },
             "require": {
                 "drupal/core": "*"
@@ -2120,8 +2120,8 @@
                     "dev-1.x": "1.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-1.7",
-                    "datestamp": "1508989144",
+                    "version": "8.x-1.8",
+                    "datestamp": "1516678385",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -2138,7 +2138,7 @@
                     "homepage": "https://www.drupal.org/user/2870933"
                 }
             ],
-            "description": "Overrides standard image formater and widget to add a support of the SVG files.",
+            "description": "Overrides the standard image formatter and widget to support SVG files.",
             "homepage": "https://www.drupal.org/project/svg_image",
             "support": {
                 "source": "http://cgit.drupalcode.org/svg_image"
