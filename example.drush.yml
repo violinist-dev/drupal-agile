@@ -1,11 +1,22 @@
-# Site config.
-site:
-  name: "Drupal Agile"
-  slogan: "Plan, track and manage your agile project in Drupal."
-  mail: "admin@email.com" 
-  # uuid: 11111111-1111-1111-1111-11111111111a
-# Admin account
+# User account used after install.
+profile: config_installer
 account:
   name: drupal
   password: drupal
   mail: your@email.com
+  role: administrator
+# Custom settings.
+# Maximum 1 level arrays.
+custom:
+  system.site:
+    # uuid: 11111111-2222-3333-4444-12345678910a
+    name: "Website name"
+    slogan: "Plan, track and manage your agile project in Drupal."
+    mail: "admin@email.com"
+  system.performance:
+    js.preprocess: false
+    css.preprocess: false
+    css.gzip: false
+  # Add other custom settings :
+  # mymodule.settings:
+  #  custom: "Custom Value"

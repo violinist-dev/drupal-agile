@@ -1,4 +1,76 @@
-name: pyramid
+name: agile
 recipe: drupal8
 config:
   webroot: web
+  # ==========================
+  # Enable XDebug
+  # @see https://gist.github.com/MatthieuScarset/0c3860def9ff1f0b84e32f618c740655 
+  # ==========================
+  #xdebug: true
+  #conf: 
+  #  php: .vscode/php.ini
+services:
+  node:
+    type: node:6.10
+    build:
+      - echo "Installation completed!"
+tooling:
+  npm:
+    service: node      
+events:
+  post-start:
+    - echo "=========================="
+    - echo "Installing dependencies..."
+    - echo "=========================="
+    - appserver: "cd $LANDO_MOUNT/ && composer install --no-interaction --optimize-autoloader"
+    #
+    # FIRST INSTALL
+    #
+    # Remove those lines after first install "lando start".
+    - echo "=========================="
+    - echo "Preparing first install"
+    - echo "=========================="
+    - appserver: "cd $LANDO_MOUNT/ && composer generate-salt"
+    - appserver: "cd $LANDO_MOUNT/ && composer fix-permissions"
+    # 
+    # Drupal automatic install with config_installer profile.
+    # @see docroot/sites/default/settings.php
+    # @see docroot/sites/default/settings.local.php
+    # @see scripts/composer/ScriptHandler::siteInstall()
+    # @see scripts/composer/ScriptHandler::siteConfig()
+    # @see scripts/composer/ScriptHandler::siteUser()
+    - echo "=========================="
+    - echo "Installing Drupal..."
+    - echo "=========================="    
+    - appserver: "cd $LANDO_MOUNT/ && composer site-install"
+    - appserver: "cd $LANDO_MOUNT/ && composer site-config"
+    - appserver: "cd $LANDO_MOUNT/ && composer site-user"
+    #
+    # END OF FIRST INSTALL
+    #
+    # Uncomment those lines once site's installed.
+    #- echo "=========================="
+    #- echo "Updating database..."
+    #- echo "=========================="
+    #- appserver: "cd $LANDO_MOUNT/ && ./bin/drush cim -r docroot"
+    #- appserver: "cd $LANDO_MOUNT/ && ./bin/drush entup -r docroot"
+    #- appserver: "cd $LANDO_MOUNT/ && ./bin/drush updb -r docroot"
+    #- appserver: "cd $LANDO_MOUNT/ && ./bin/drush locale-update -r docroot"
+    #- appserver: "cd $LANDO_MOUNT/ && ./bin/drush cr -r docroot"
+    - echo "=========================="
+    - echo "Building theme assets..."
+    - echo "=========================="
+    - node: "cd $LANDO_MOUNT && npm run reset"
+    - appserver: "cd $LANDO_MOUNT/ && ./bin/drush cr -r docroot"    
+    #- echo "=========================="
+    #- echo "Checking coding standards..."
+    #- echo "=========================="
+    #- node: "cd $LANDO_MOUNT && npm run lint"
+    #- appserver: "cd $LANDO_MOUNT/ && composer code-review"
+    #
+    # That last one is just for fun :)
+    #
+    #- echo "=========================="
+    #- echo "Calculating statistics..."
+    #- echo "=========================="
+    #- node: "cd $LANDO_MOUNT && npm run stats"    
