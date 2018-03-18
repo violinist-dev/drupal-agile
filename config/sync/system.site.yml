@@ -1,7 +1,7 @@
 uuid: 64378e04-f29b-4985-93e1-4b0f3bafa24b
-name: Site-Install
-mail: admin@example.com
-slogan: ''
+name: Website
+mail: admin@email.com
+slogan: 'Plan,'
 page:
   403: ''
   404: ''
