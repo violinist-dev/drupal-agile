@@ -1,9 +1,0 @@
-type: module
-name: 'Agile - Issue'
-description: 'Generate issue for your Agile workflow.'
-package: Agile
-core: 8.x
-tags:
- - agile
-dependencies:
-  - agile

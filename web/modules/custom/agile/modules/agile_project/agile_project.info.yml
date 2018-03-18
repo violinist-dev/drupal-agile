@@ -1,9 +1,0 @@
-type: module
-name: 'Agile - Project'
-description: 'Generate project for your Agile workflow.'
-package: Agile
-core: 8.x
-tags:
- - agile
-dependencies:
-  - agile
