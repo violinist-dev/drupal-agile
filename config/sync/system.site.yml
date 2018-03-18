@@ -1,4 +1,4 @@
-uuid: b2e7433d-5f9f-42ab-8ddc-0d042b910b74
+uuid: 64378e04-f29b-4985-93e1-4b0f3bafa24b
 name: Site-Install
 mail: admin@example.com
 slogan: ''
@@ -11,4 +11,4 @@ weight_select_max: 100
 langcode: en
 default_langcode: en
 _core:
-  default_config_hash: AyT9s8OUcclfALRE_imByOMgtZ19eOlqdF6zI3p7yqo
+  default_config_hash: yXadRE77Va-G6dxhd2kPYapAvbnSvTF6hO4oXiOEynI
