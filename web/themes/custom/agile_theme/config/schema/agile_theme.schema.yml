@@ -1,0 +1,4 @@
+# Schema for the configuration files of the Agile theme.
+agile_theme.settings:
+  type: theme_settings
+  label: 'Agile Theme settings'

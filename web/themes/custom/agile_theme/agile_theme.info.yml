@@ -1,0 +1,13 @@
+name: 'Agile Theme'
+type: theme
+description: 'A custom theme for your Agile project.'
+package: Agile
+version: VERSION
+core: 8.x
+base theme: seven
+
+libraries:
+  - agile_theme/base
+
+ckeditor_stylesheets:
+  - css/base/wysiwyg.css
