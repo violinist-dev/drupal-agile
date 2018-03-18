@@ -1,0 +1,33 @@
+{
+  "name": "agile_theme",
+  "version": "1.0.0",
+  "description": "Drupal Agile custom theme",
+  "main": "agile_theme.theme",
+  "devDependencies": {
+    "node-sass": "^4.5.3"
+  },  
+  "scripts": {
+    "build": "npm run build:css",
+    "build:css": "node-sass --include-path scss scss/ -o css/",
+    "watch": "npm run watch:css",
+    "watch:css": "node-sass -w --include-path scss scss/ -o css/",
+    "test": "echo 'Bravo!'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com:MatthieuScarset/agile_theme.git"
+  },
+  "keywords": [
+    "drupal-8",
+    "drupal-agile",
+    "drupal-theme",
+    "matthieuscarset"
+  ],
+  "author": {
+    "name": "Matthieu SCARSET",
+    "email": "m@matthieuscarset.com",
+    "url": "http://matthieuscarset.com/"
+  },
+  "license": "ISC",
+  "homepage": "https://github.com/MatthieuScarset/agile_theme#readme"
+}

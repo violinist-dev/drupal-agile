@@ -1,7 +1,7 @@
 {
   "name": "drupal-agile",
   "version": "1.0.0",
-  "description": "A Drupal 8 composer-based project.",
+  "description": "Plan, track and manage your agile project in Drupal.",
   "main": "composer.json",
   "dependencies": {},
   "devDependencies": {
@@ -12,30 +12,27 @@
   },
   "config": {
     "stylelintrc_file": ".stylelintrc.json",
-    "base_theme": "docroot/themes/contrib/turbo",
-    "custom_theme": "docroot/themes/custom/matt_theme",
-    "theme_sass_path": "docroot/themes/custom/matt_theme/scss/**/*.scss",
-    "theme_js_path": "docroot/themes/custom/matt_theme/js/**/*.js",
+    "theme": "web/themes/custom/agile_theme",
+    "theme_sass_path": "web/themes/custom/agile_theme/scss/**/*.scss",
+    "theme_js_path": "web/themes/custom/agile_theme/js/**/*.js",
     "gitstats_args": "--file-types=html,twig,php,theme,module,scss,js,patch --timeline=true --hard=true --metrics=true --grading=true"
   },
   "scripts": {
-    "reset": "npm run reset:base_theme && npm run reset:custom_theme",
-    "reset:base_theme": "cd $npm_package_config_base_theme && rm -rf node_modules/ && npm install && npm run build",
-    "reset:custom_theme": "cd $npm_package_config_custom_theme && rm -rf node_modules/ && npm install && npm run build",
-    "build": "npm run build:base_theme && npm run build:custom_theme",
-    "build:base_theme": "cd $npm_package_config_base_theme && npm run build",
-    "build:custom_theme": "cd $npm_package_config_custom_theme && npm run build",
-    "watch": "cd $npm_package_config_custom_theme && node_modules/.bin/node-sass --include-path -w scss scss/ -o css/",
+    "reset": "npm run reset:theme",
+    "reset:theme": "cd $npm_package_config_theme && rm -rf node_modules/ && npm install && npm run build",
+    "build": "npm run build:theme",
+    "build:theme": "cd $npm_package_config_theme && npm run build",
+    "watch": "cd $npm_package_config_theme && node_modules/.bin/node-sass --include-path -w scss scss/ -o css/",
     "lint": "npm run lint:js && npm run lint:css",
     "lint:js": "./node_modules/.bin/jslint $npm_package_config_theme_js_path > logs/errors_js.log; exit 0;",
     "lint:css": "./node_modules/.bin/stylelint $npm_package_config_theme_sass_path -q --fix --config $npm_package_config_stylelintrc_file > logs/errors_css.log; exit 0;",
     "stats": "./node_modules/.bin/gitinspector --format=html $npm_package_config_gitstats_args > .gitstats.html",
-    "stats-me": "./node_modules/.bin/gitinspector --format=html -x 'author:^(?!(matt_themevation))' $npm_package_config_gitstats_args > .gitstats.me.txt && cat .gitstats.me.txt",
+    "stats-me": "./node_modules/.bin/gitinspector --format=html -x 'author:^(?!(John SMITH))' $npm_package_config_gitstats_args > .gitstats.me.txt && cat .gitstats.me.txt",
     "test": "echo 'Test' && exit 0"
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@bitbucket.org/matt_theme/drupal-project.git"
+    "url": "git+ssh://git@bitbucket.org/MatthieuScarset/drupal-agile.git"
   },
   "author": "Matthieu SCARSET",
   "license": "ISC"

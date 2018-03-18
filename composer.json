@@ -1,6 +1,6 @@
 {
   "name": "drupal-agile/drupal-agile",
-  "description": "Composer-based template for Drupal projects.",
+  "description": "Plan, track and manage your agile project in Drupal.",
   "type": "project",
   "license": "GPL-2.0+",
   "authors": [
