@@ -13,7 +13,7 @@
 #[ "$current_branch" != "$develop_branch" ] && exit 0
 
 # regex to validate in commit msg
-commit_regex='(#[0-9] - +|dev - +|merge -)'
+commit_regex='(#[0-9]+|dev+|merge)'
 error_msg="Aborting commit. Your commit message is missing an issue number '#666 - Your message' or 'Dev - ' or 'Merge - '"
 
 if ! grep -iqE "$commit_regex" "$1"; then
