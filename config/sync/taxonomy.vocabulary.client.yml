@@ -1,0 +1,9 @@
+uuid: 951c5f1d-ee23-4a9e-9ba1-4779c240e6be
+langcode: en
+status: true
+dependencies: {  }
+name: Client
+vid: client
+description: 'Entities for whom you develop your projects.'
+hierarchy: 0
+weight: 0
