@@ -1,0 +1,21 @@
+#!/bin/sh
+
+# Copy this file and make it executable in your Git repo hooks:
+#
+# cp example.commit-msg.githook .git/hooks/commit-msg
+# chmod +x .git/hooks/commit-msg
+
+# set this to your active development branch
+#develop_branch="dev"
+#current_branch="$(git rev-parse --abbrev-ref HEAD)"
+
+# only check commit messages on main development branch
+#[ "$current_branch" != "$develop_branch" ] && exit 0
+
+# regex to validate in commit msg
+commit_regex='(#[0-9]+|dev+|merge)'
+error_msg="Aborting commit. Your commit message is missing an issue number '#666 - Your message' or 'Dev - ' or 'Merge - '"
+
+if ! grep -iqE "$commit_regex" "$1"; then
+    echo "$error_msg" >&2 && exit 1
+fi
