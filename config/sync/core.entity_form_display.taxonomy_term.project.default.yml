@@ -1,0 +1,47 @@
+uuid: c3141c3e-d8b2-4f6b-b6f1-20efb1fee029
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.project.client
+    - taxonomy.vocabulary.project
+  module:
+    - text
+id: taxonomy_term.project.default
+targetEntityType: taxonomy_term
+bundle: project
+mode: default
+content:
+  client:
+    weight: 1
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  description:
+    type: text_textarea
+    weight: 2
+    region: content
+    settings:
+      placeholder: ''
+      rows: 5
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 3
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

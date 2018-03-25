@@ -1,0 +1,29 @@
+uuid: 3d04ebf5-24c5-4234-96e6-b7762e78c690
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.contacts
+    - taxonomy.vocabulary.client
+id: taxonomy_term.client.contacts
+field_name: contacts
+entity_type: taxonomy_term
+bundle: client
+label: Contacts
+description: 'People belonging to this client. Create a new user <a href="/admin/people/create">here</a> if needed.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:user'
+  handler_settings:
+    include_anonymous: false
+    filter:
+      type: _none
+    target_bundles: null
+    sort:
+      field: name
+      direction: ASC
+    auto_create: false
+field_type: entity_reference

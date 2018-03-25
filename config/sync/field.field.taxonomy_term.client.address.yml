@@ -1,0 +1,35 @@
+uuid: 24e9fd81-8de5-48de-a6f2-700ad4c3bd13
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.address
+    - taxonomy.vocabulary.client
+  module:
+    - address
+id: taxonomy_term.client.address
+field_name: address
+entity_type: taxonomy_term
+bundle: client
+label: Address
+description: 'Client''s address.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  available_countries: {  }
+  fields:
+    locality: locality
+    postalCode: postalCode
+    addressLine1: addressLine1
+    addressLine2: addressLine2
+    organization: organization
+    administrativeArea: '0'
+    dependentLocality: '0'
+    sortingCode: '0'
+    givenName: '0'
+    additionalName: '0'
+    familyName: '0'
+  langcode_override: ''
+field_type: address

@@ -1,0 +1,56 @@
+uuid: bd42d388-6404-49f7-a54a-4e92fa745c78
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.client.address
+    - field.field.taxonomy_term.client.contacts
+    - taxonomy.vocabulary.client
+  module:
+    - address
+    - text
+id: taxonomy_term.client.default
+targetEntityType: taxonomy_term
+bundle: client
+mode: default
+content:
+  address:
+    weight: 3
+    settings:
+      default_country: null
+    third_party_settings: {  }
+    type: address_default
+    region: content
+  contacts:
+    weight: 4
+    settings:
+      match_operator: STARTS_WITH
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  description:
+    type: text_textarea
+    weight: 1
+    region: content
+    settings:
+      rows: 3
+      placeholder: 'A good client recommended from the last conference in Dallas... '
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

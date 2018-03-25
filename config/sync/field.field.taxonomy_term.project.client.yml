@@ -1,0 +1,29 @@
+uuid: b77f4a60-9aa5-4cb2-9c45-b23720f3608c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.client
+    - taxonomy.vocabulary.client
+    - taxonomy.vocabulary.project
+id: taxonomy_term.project.client
+field_name: client
+entity_type: taxonomy_term
+bundle: project
+label: Client
+description: 'The client for whom this project exists for.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      client: client
+    sort:
+      field: name
+      direction: asc
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference
