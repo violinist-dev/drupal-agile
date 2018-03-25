@@ -1,0 +1,9 @@
+uuid: 70b0f050-2579-42d2-85b0-1978886ff889
+langcode: en
+status: true
+dependencies: {  }
+name: Project
+vid: project
+description: 'A collection of carefully planned and designed tasks to achieve your goals.'
+hierarchy: 0
+weight: 0

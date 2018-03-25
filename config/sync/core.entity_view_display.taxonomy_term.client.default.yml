@@ -1,0 +1,18 @@
+uuid: a405e77b-bcdb-463f-b8f5-83f244aca16e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.client.address
+    - field.field.taxonomy_term.client.contacts
+    - taxonomy.vocabulary.client
+id: taxonomy_term.client.default
+targetEntityType: taxonomy_term
+bundle: client
+mode: default
+content: {  }
+hidden:
+  address: true
+  contacts: true
+  description: true
+  langcode: true
