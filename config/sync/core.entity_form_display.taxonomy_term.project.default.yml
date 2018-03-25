@@ -3,11 +3,13 @@ langcode: en
 status: true
 dependencies:
   config:
+    - entity_browser.browser.users
     - field.field.taxonomy_term.project.client
     - field.field.taxonomy_term.project.code
     - field.field.taxonomy_term.project.team
     - taxonomy.vocabulary.project
   module:
+    - entity_browser
     - text
 id: taxonomy_term.project.default
 targetEntityType: taxonomy_term
@@ -17,9 +19,9 @@ content:
   client:
     weight: 2
     settings:
-      match_operator: CONTAINS
+      match_operator: STARTS_WITH
       size: 60
-      placeholder: ''
+      placeholder: 'Start typing to search for an existing client...'
     third_party_settings: {  }
     type: entity_reference_autocomplete
     region: content
@@ -33,7 +35,7 @@ content:
     region: content
   description:
     type: text_textarea
-    weight: 3
+    weight: 4
     region: content
     settings:
       placeholder: ''
@@ -41,7 +43,7 @@ content:
     third_party_settings: {  }
   langcode:
     type: language_select
-    weight: 4
+    weight: 5
     region: content
     settings:
       include_locked: true
@@ -55,12 +57,17 @@ content:
       placeholder: ''
     third_party_settings: {  }
   team:
-    weight: 5
+    weight: 3
     settings:
-      match_operator: CONTAINS
-      size: 60
-      placeholder: ''
+      entity_browser: users
+      field_widget_display: rendered_entity
+      field_widget_remove: true
+      open: true
+      selection_mode: selection_append
+      field_widget_display_settings:
+        view_mode: compact
+      field_widget_edit: false
     third_party_settings: {  }
-    type: entity_reference_autocomplete
+    type: entity_browser_entity_reference
     region: content
 hidden: {  }

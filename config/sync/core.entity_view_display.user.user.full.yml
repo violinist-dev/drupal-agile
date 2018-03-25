@@ -1,0 +1,20 @@
+uuid: db225d32-c9d0-4a44-add3-8a4ffe77fba4
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.user.full
+  module:
+    - user
+id: user.user.full
+targetEntityType: user
+bundle: user
+mode: full
+content:
+  member_for:
+    weight: 5
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  langcode: true

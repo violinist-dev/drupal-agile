@@ -25,5 +25,5 @@ settings:
     sort:
       field: name
       direction: ASC
-    auto_create: false
+    auto_create: true
 field_type: entity_reference
