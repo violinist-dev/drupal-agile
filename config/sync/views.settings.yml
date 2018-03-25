@@ -1,0 +1,13 @@
+ui:
+  show:
+    master_display: true
+    advanced_column: true
+    display_embed: true
+    preview_information: true
+    sql_query:
+      where: below
+      enabled: true
+    performance_statistics: true
+    additional_queries: false
+  exposed_filter_any_label: new_any
+  always_live_preview: true
