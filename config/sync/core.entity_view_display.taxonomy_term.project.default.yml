@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.taxonomy_term.project.client
     - field.field.taxonomy_term.project.code
+    - field.field.taxonomy_term.project.team
     - taxonomy.vocabulary.project
 id: taxonomy_term.project.default
 targetEntityType: taxonomy_term
@@ -16,3 +17,4 @@ hidden:
   code: true
   description: true
   langcode: true
+  team: true

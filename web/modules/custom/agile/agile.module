@@ -5,3 +5,39 @@
  * This file holds functions useful for Agile module.
  * Please contribute!
  */
+
+use Drupal\user\Entity\User;
+use Drupal\Core\Entity\Entity\EntityViewDisplay;
+
+ /**
+ * Implements hook_entity_extra_field_info().
+ */
+function agile_entity_extra_field_info() {
+  // Empty array for now.
+  $extra = [];
+
+  // Custom component for User display.
+  $extra['user']['user']['display']['email'] = [
+    'label' => t('Email'),
+    'description' => t("Display the user's email."),
+    'weight' => 100,
+    'visible' => FALSE,
+  ];
+
+  return $extra;
+}
+
+
+/**
+ * Implements hook_ENTITY_TYPE_view().
+ *
+ * @todo Remove hard uses of target_id and prefer the use of $entity->referencedEntities() method.
+ */
+function agile_user_view(array &$build, User $user, EntityViewDisplay $display, $view_mode) {
+  // User email component.
+  // Use {{ content.email }} in Twig.
+  if ($component = $display->getComponent('email')) {
+    $build['email'] = $user->get('mail')->first()->view();
+    $build['email']['#cache'] = ['tags' => $user->getEntityType()->getListCacheTags()];
+  }
+} 

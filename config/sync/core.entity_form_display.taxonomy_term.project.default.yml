@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.taxonomy_term.project.client
     - field.field.taxonomy_term.project.code
+    - field.field.taxonomy_term.project.team
     - taxonomy.vocabulary.project
   module:
     - text
@@ -16,9 +17,9 @@ content:
   client:
     weight: 2
     settings:
-      match_operator: CONTAINS
+      match_operator: STARTS_WITH
       size: 60
-      placeholder: ''
+      placeholder: 'Start typing to search for an existing client...'
     third_party_settings: {  }
     type: entity_reference_autocomplete
     region: content
@@ -32,7 +33,7 @@ content:
     region: content
   description:
     type: text_textarea
-    weight: 3
+    weight: 4
     region: content
     settings:
       placeholder: ''
@@ -40,7 +41,7 @@ content:
     third_party_settings: {  }
   langcode:
     type: language_select
-    weight: 4
+    weight: 5
     region: content
     settings:
       include_locked: true
@@ -53,4 +54,13 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+  team:
+    weight: 3
+    settings:
+      match_operator: STARTS_WITH
+      size: 60
+      placeholder: 'Start typing to search for existing users...'
+    third_party_settings: {  }
+    type: entity_reference_autocomplete_tags
+    region: content
 hidden: {  }

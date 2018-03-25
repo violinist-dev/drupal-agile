@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "baa4dbea3415e67842fe4725f3d533a9",
+    "content-hash": "a01c3ad52d3881143dbc696056248b0c",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1537,6 +1537,9 @@
                     "recurse": false,
                     "replace": false,
                     "merge-extra": false
+                },
+                "patches_applied": {
+                    "#2955877 Unsupported operand types in Views FieldPluginBase.php (views)": "https://www.drupal.org/files/issues/2018-03-25/0001-2955877-Fix-unsupported-operand-types.patch"
                 }
             },
             "autoload": {

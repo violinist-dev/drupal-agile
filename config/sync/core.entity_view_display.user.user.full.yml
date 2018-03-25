@@ -1,0 +1,55 @@
+uuid: db225d32-c9d0-4a44-add3-8a4ffe77fba4
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.user.full
+    - field.field.user.user.avatar
+    - field.field.user.user.first_name
+    - field.field.user.user.last_name
+    - image.style.avatar
+  module:
+    - image
+    - user
+id: user.user.full
+targetEntityType: user
+bundle: user
+mode: full
+content:
+  avatar:
+    type: image
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      image_style: avatar
+      image_link: ''
+    third_party_settings: {  }
+  email:
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  first_name:
+    type: string
+    weight: 1
+    region: content
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  last_name:
+    type: string
+    weight: 2
+    region: content
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  member_for:
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  langcode: true
