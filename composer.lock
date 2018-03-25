@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "d0db5cf0c3764e21393a7b4a5d982f90",
+    "content-hash": "baa4dbea3415e67842fe4725f3d533a9",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -2830,6 +2830,79 @@
             "homepage": "https://www.drupal.org/project/svg_image",
             "support": {
                 "source": "http://cgit.drupalcode.org/svg_image"
+            }
+        },
+        {
+            "name": "drupal/taxonomy_unique",
+            "version": "2.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/taxonomy_unique",
+                "reference": "8.x-2.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/taxonomy_unique-8.x-2.0.zip",
+                "reference": "8.x-2.0",
+                "shasum": "cad2d8c9fef167a2f9e74c9df9da8b5023cba9b6"
+            },
+            "require": {
+                "drupal/core": "*"
+            },
+            "require-dev": {
+                "drupal/coder": "8.2.8",
+                "squizlabs/php_codesniffer": "2.8.0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-2.x": "2.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-2.0",
+                    "datestamp": "1504883943",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "scripts": {
+                "post-install-cmd": [
+                    "./vendor/bin/phpcs --config-set installed_paths ../../drupal/coder/coder_sniffer",
+                    "./vendor/bin/phpcs --config-set show_progress 1"
+                ],
+                "post-update-cmd": [
+                    "./vendor/bin/phpcs --config-set installed_paths ../../drupal/coder/coder_sniffer",
+                    "./vendor/bin/phpcs --config-set show_progress 1"
+                ],
+                "phpcs": [
+                    "./vendor/bin/phpcs --standard=Drupal,DrupalPractice ./ --ignore=./vendor"
+                ],
+                "phpcbf": [
+                    "./vendor/bin/phpcbf --standard=Drupal,DrupalPractice ./ --ignore=./vendor"
+                ]
+            },
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Rafael Schally",
+                    "homepage": "https://www.drupal.org/user/856550",
+                    "email": "rafael.schally@gmail.com"
+                }
+            ],
+            "description": "Checks for duplicate occurrences of term names.",
+            "homepage": "https://www.drupal.org/project/taxonomy_unique",
+            "keywords": [
+                "drupal",
+                "taxonomy",
+                "ui"
+            ],
+            "support": {
+                "source": "http://cgit.drupalcode.org/taxonomy_unique"
             }
         },
         {
