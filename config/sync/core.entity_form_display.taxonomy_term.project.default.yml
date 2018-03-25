@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.taxonomy_term.project.client
+    - field.field.taxonomy_term.project.code
     - taxonomy.vocabulary.project
   module:
     - text
@@ -13,7 +14,7 @@ bundle: project
 mode: default
 content:
   client:
-    weight: 1
+    weight: 2
     settings:
       match_operator: CONTAINS
       size: 60
@@ -21,9 +22,17 @@ content:
     third_party_settings: {  }
     type: entity_reference_autocomplete
     region: content
+  code:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
   description:
     type: text_textarea
-    weight: 2
+    weight: 3
     region: content
     settings:
       placeholder: ''
@@ -31,7 +40,7 @@ content:
     third_party_settings: {  }
   langcode:
     type: language_select
-    weight: 3
+    weight: 4
     region: content
     settings:
       include_locked: true

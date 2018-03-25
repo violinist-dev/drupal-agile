@@ -1,0 +1,6 @@
+project: 1
+project_message: 'Project "@term" already exists. Choose another name.'
+client: 1
+client_message: 'Client @term already exists.'
+project_code: 1
+project_code_message: '@term already exists.'
