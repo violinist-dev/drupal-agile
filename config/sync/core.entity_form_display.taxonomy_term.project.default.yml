@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.taxonomy_term.project.client
     - field.field.taxonomy_term.project.code
+    - field.field.taxonomy_term.project.team
     - taxonomy.vocabulary.project
   module:
     - text
@@ -53,4 +54,13 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+  team:
+    weight: 5
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
 hidden: {  }

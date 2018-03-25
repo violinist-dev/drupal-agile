@@ -1,0 +1,29 @@
+uuid: 84d85d45-ecd2-48aa-a93a-3f5c7a143141
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.team
+    - taxonomy.vocabulary.project
+id: taxonomy_term.project.team
+field_name: team
+entity_type: taxonomy_term
+bundle: project
+label: 'Team members'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:user'
+  handler_settings:
+    include_anonymous: false
+    filter:
+      type: _none
+    target_bundles: null
+    sort:
+      field: name
+      direction: ASC
+    auto_create: false
+field_type: entity_reference
