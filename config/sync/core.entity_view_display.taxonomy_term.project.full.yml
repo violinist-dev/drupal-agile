@@ -6,6 +6,7 @@ dependencies:
     - core.entity_view_mode.taxonomy_term.full
     - field.field.taxonomy_term.project.client
     - field.field.taxonomy_term.project.code
+    - field.field.taxonomy_term.project.team
     - taxonomy.vocabulary.project
   module:
     - text
@@ -16,7 +17,7 @@ mode: full
 content:
   client:
     weight: 2
-    label: above
+    label: inline
     settings:
       link: true
     third_party_settings: {  }
@@ -36,6 +37,15 @@ content:
     weight: 1
     region: content
     settings: {  }
+    third_party_settings: {  }
+  team:
+    type: entity_reference_entity_view
+    weight: 3
+    region: content
+    label: above
+    settings:
+      view_mode: compact
+      link: false
     third_party_settings: {  }
 hidden:
   langcode: true

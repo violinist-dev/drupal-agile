@@ -3,13 +3,11 @@ langcode: en
 status: true
 dependencies:
   config:
-    - entity_browser.browser.users
     - field.field.taxonomy_term.project.client
     - field.field.taxonomy_term.project.code
     - field.field.taxonomy_term.project.team
     - taxonomy.vocabulary.project
   module:
-    - entity_browser
     - text
 id: taxonomy_term.project.default
 targetEntityType: taxonomy_term
@@ -59,15 +57,10 @@ content:
   team:
     weight: 3
     settings:
-      entity_browser: users
-      field_widget_display: rendered_entity
-      field_widget_remove: true
-      open: true
-      selection_mode: selection_append
-      field_widget_display_settings:
-        view_mode: compact
-      field_widget_edit: false
+      match_operator: STARTS_WITH
+      size: 60
+      placeholder: 'Start typing to search for existing users...'
     third_party_settings: {  }
-    type: entity_browser_entity_reference
+    type: entity_reference_autocomplete_tags
     region: content
 hidden: {  }

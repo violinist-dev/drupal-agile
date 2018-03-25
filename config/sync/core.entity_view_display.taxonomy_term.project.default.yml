@@ -11,17 +11,10 @@ id: taxonomy_term.project.default
 targetEntityType: taxonomy_term
 bundle: project
 mode: default
-content:
-  team:
-    weight: -4
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    type: entity_reference_label
-    region: content
+content: {  }
 hidden:
   client: true
   code: true
   description: true
   langcode: true
+  team: true
