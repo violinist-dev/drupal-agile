@@ -169,8 +169,8 @@
       "drupal/paragraphs": {
         "#2787095#comment-12529663 Fix paragraphs translation settings (paragraphs)": "https://www.drupal.org/files/issues/2018-03-16/0001-Issue-2787095-Improve-translation-settings_0.patch"
       },
-      "drupal/views": {
-        "#2669084 Unsupported operand types in views FieldPluginBase.php (views)": "https://www.drupal.org/files/issues/unsupported-operand-types-in-views-FieldPluginBase-2669084-4.patch"
+      "drupal/core": {
+        "#2955877 Unsupported operand types in Views FieldPluginBase.php (views)": "https://www.drupal.org/files/issues/2018-03-25/0001-2955877-Fix-unsupported-operand-types.patch"
       },
       "drupal/viewsreference": {
         "#2941793 Fix array_filter issue in Field formatter (viewsreference)": "https://www.drupal.org/files/issues/0001-Fix-array_filter-issue-in-Field-Formatter.patch"
