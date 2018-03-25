@@ -1537,9 +1537,6 @@
                     "recurse": false,
                     "replace": false,
                     "merge-extra": false
-                },
-                "patches_applied": {
-                    "#2955877 Unsupported operand types in Views FieldPluginBase.php (views)": "https://www.drupal.org/files/issues/2018-03-25/0001-2955877-Fix-unsupported-operand-types.patch"
                 }
             },
             "autoload": {
@@ -1681,10 +1678,6 @@
                     "name": "Daniel Wehner (dawehner)",
                     "homepage": "https://www.drupal.org/u/dawehner",
                     "role": "Maintainer"
-                },
-                {
-                    "name": "joelpittet",
-                    "homepage": "https://www.drupal.org/user/160302"
                 },
                 {
                     "name": "merlinofchaos",
@@ -1983,17 +1976,17 @@
         },
         {
             "name": "drupal/file_entity",
-            "version": "2.0.0-beta4",
+            "version": "2.0.0-beta5",
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/file_entity",
-                "reference": "8.x-2.0-beta4"
+                "reference": "8.x-2.0-beta5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/file_entity-8.x-2.0-beta4.zip",
-                "reference": "8.x-2.0-beta4",
-                "shasum": "cbf2d49db3d813812c51c163f222b28cd83955c2"
+                "url": "https://ftp.drupal.org/files/projects/file_entity-8.x-2.0-beta5.zip",
+                "reference": "8.x-2.0-beta5",
+                "shasum": "d9ae6432ac38bb70e6b5f4b797a3f0f1b5f09331"
             },
             "require": {
                 "drupal/core": "*",
@@ -2008,8 +2001,8 @@
                     "dev-2.x": "2.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-2.0-beta4",
-                    "datestamp": "1502334246",
+                    "version": "8.x-2.0-beta5",
+                    "datestamp": "1521465484",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Project has not opted into security advisory coverage!"
@@ -2428,9 +2421,6 @@
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
                     }
-                },
-                "patches_applied": {
-                    "#2787095#comment-12529663 Fix paragraphs translation settings (paragraphs)": "https://www.drupal.org/files/issues/2018-03-16/0001-Issue-2787095-Improve-translation-settings_0.patch"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
@@ -6450,6 +6440,12 @@
                 "url": "https://git.drupal.org/project/coder.git",
                 "reference": "984c54a7b1e8f27ff1c32348df69712afd86b17f"
             },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/klausi/coder/zipball/984c54a7b1e8f27ff1c32348df69712afd86b17f",
+                "reference": "984c54a7b1e8f27ff1c32348df69712afd86b17f",
+                "shasum": ""
+            },
             "require": {
                 "ext-mbstring": "*",
                 "php": ">=5.4.0",
@@ -6897,7 +6893,7 @@
                 },
                 "drupal": {
                     "version": "8.x-2.0",
-                    "datestamp": "1479750843",
+                    "datestamp": "1521470284",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
