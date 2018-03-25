@@ -4,17 +4,53 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.user.compact
+    - field.field.user.user.avatar
+    - field.field.user.user.first_name
+    - field.field.user.user.last_name
+    - image.style.avatar_small
   module:
+    - image
     - user
 id: user.user.compact
 targetEntityType: user
 bundle: user
 mode: compact
 content:
-  member_for:
-    weight: 5
+  avatar:
+    type: image
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      image_style: avatar_small
+      image_link: ''
+    third_party_settings: {  }
+  email:
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  first_name:
+    type: string
+    weight: 1
+    region: content
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  last_name:
+    type: string
+    weight: 2
+    region: content
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  username:
+    weight: 0
     region: content
     settings: {  }
     third_party_settings: {  }
 hidden:
   langcode: true
+  member_for: true

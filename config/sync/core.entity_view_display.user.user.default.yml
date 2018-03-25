@@ -2,6 +2,10 @@ uuid: 5457be7a-fa41-48fe-bede-d29ec11db2c1
 langcode: en
 status: true
 dependencies:
+  config:
+    - field.field.user.user.avatar
+    - field.field.user.user.first_name
+    - field.field.user.user.last_name
   module:
     - user
 id: user.user.default
@@ -10,5 +14,9 @@ bundle: user
 mode: default
 content: {  }
 hidden:
+  avatar: true
+  first_name: true
   langcode: true
+  last_name: true
   member_for: true
+  username: true

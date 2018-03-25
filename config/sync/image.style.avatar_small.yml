@@ -1,0 +1,14 @@
+uuid: 75a3240f-4370-49dc-ae31-0158d685c7d3
+langcode: en
+status: true
+dependencies: {  }
+name: avatar_small
+label: 'Avatar (small)'
+effects:
+  ba7c7bd6-25d3-4d21-b311-948b4a5148a6:
+    uuid: ba7c7bd6-25d3-4d21-b311-948b4a5148a6
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 60
+      height: 60
