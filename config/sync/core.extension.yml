@@ -20,10 +20,6 @@ module:
   node: 0
   page_cache: 0
   search: 0
-  search_api: 0
-  search_api_db: 0
-  search_api_solr: 0
-  search_api_solr_multilingual: 0
   system: 0
   taxonomy: 0
   taxonomy_unique: 0
