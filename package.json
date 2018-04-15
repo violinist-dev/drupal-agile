@@ -12,9 +12,9 @@
   },
   "config": {
     "stylelintrc_file": ".stylelintrc.json",
-    "theme": "web/themes/custom/agile_theme",
-    "theme_sass_path": "web/themes/custom/agile_theme/scss/**/*.scss",
-    "theme_js_path": "web/themes/custom/agile_theme/js/**/*.js",
+    "theme": "docroot/themes/custom/agile_theme",
+    "theme_sass_path": "docroot/themes/custom/agile_theme/scss/**/*.scss",
+    "theme_js_path": "docroot/themes/custom/agile_theme/js/**/*.js",
     "gitstats_args": "--file-types=html,twig,php,theme,module,scss,js,patch --timeline=true --hard=true --metrics=true --grading=true"
   },
   "scripts": {

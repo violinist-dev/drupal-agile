@@ -1,7 +1,7 @@
 name: agile
 recipe: drupal8
 config:
-  webroot: web
+  webroot: docroot
   # ==========================
   # Enable XDebug
   # @see https://gist.github.com/MatthieuScarset/0c3860def9ff1f0b84e32f618c740655 

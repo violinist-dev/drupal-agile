@@ -6,9 +6,9 @@
   "authors": [
     {
       "name": "Matthieu SCARSET",
-      "role": "Fullstack Drupal developer",
+      "role": "Fullstack developer",
       "email": "m@matthieuscarset.com",
-      "homepage": "http://matthieuscarset.com/"
+      "homepage": "https://matthieuscarset.com/"
     }
   ],
   "repositories": [
@@ -127,22 +127,22 @@
       "drupal-theme-custom"
     ],
     "installer-paths": {
-      "web/core": [
+      "docroot/core": [
         "type:drupal-core"
       ],
-      "web/libraries/{$name}": [
+      "docroot/libraries/{$name}": [
         "type:drupal-library"
       ],
-      "web/modules/contrib/{$name}": [
+      "docroot/modules/contrib/{$name}": [
         "type:drupal-module"
       ],
-      "web/profiles/contrib/{$name}": [
+      "docroot/profiles/contrib/{$name}": [
         "type:drupal-profile"
       ],
-      "web/themes/contrib/{$name}": [
+      "docroot/themes/contrib/{$name}": [
         "type:drupal-theme"
       ],
-      "web/themes/custom/{$name}": [
+      "docroot/themes/custom/{$name}": [
         "type:drupal-theme-custom"
       ],
       "drush/contrib/{$name}": [
