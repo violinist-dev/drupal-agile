@@ -1,0 +1,21 @@
+uuid: d9d3d7e2-6183-4043-a611-a8c2c88c8889
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.start
+    - taxonomy.vocabulary.sprint
+  module:
+    - datetime
+id: taxonomy_term.sprint.start
+field_name: start
+entity_type: taxonomy_term
+bundle: sprint
+label: Start
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

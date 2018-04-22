@@ -1,11 +1,11 @@
-uuid: 6a175a4f-3d7e-4541-bf8b-19a6d0773896
+uuid: 715d281b-d834-42b3-93ad-f43bdd34768d
 langcode: en
 status: true
 dependencies:
   config:
-    - taxonomy.vocabulary.client
-id: taxonomy_term.client
+    - taxonomy.vocabulary.issue_type
+id: taxonomy_term.issue_type
 target_entity_type_id: taxonomy_term
-target_bundle: client
+target_bundle: issue_type
 default_langcode: site_default
 language_alterable: true

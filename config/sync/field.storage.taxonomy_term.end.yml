@@ -1,0 +1,20 @@
+uuid: e1fe9644-bd3a-4585-8f7b-63acb3729156
+langcode: en
+status: true
+dependencies:
+  module:
+    - datetime
+    - taxonomy
+id: taxonomy_term.end
+field_name: end
+entity_type: taxonomy_term
+type: datetime
+settings:
+  datetime_type: date
+module: datetime
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
