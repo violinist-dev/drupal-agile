@@ -3,18 +3,23 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.taxonomy_term.sprint.end
+    - field.field.taxonomy_term.sprint.dates
     - field.field.taxonomy_term.sprint.project
-    - field.field.taxonomy_term.sprint.start
     - taxonomy.vocabulary.sprint
   module:
-    - datetime
+    - datetime_range
     - text
 id: taxonomy_term.sprint.default
 targetEntityType: taxonomy_term
 bundle: sprint
 mode: default
 content:
+  dates:
+    weight: 4
+    settings: {  }
+    third_party_settings: {  }
+    type: daterange_default
+    region: content
   description:
     type: text_textfield
     weight: 0
@@ -23,12 +28,6 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-  end:
-    weight: 5
-    settings: {  }
-    third_party_settings: {  }
-    type: datetime_default
-    region: content
   langcode:
     type: language_select
     weight: 2
@@ -52,11 +51,5 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: entity_reference_autocomplete
-    region: content
-  start:
-    weight: 4
-    settings: {  }
-    third_party_settings: {  }
-    type: datetime_default
     region: content
 hidden: {  }
