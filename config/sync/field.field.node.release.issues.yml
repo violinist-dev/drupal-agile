@@ -1,15 +1,15 @@
-uuid: 85ab8442-1334-4a6a-bcfa-7394970e9e68
+uuid: 5673d7d1-2141-43c5-88d3-ffbd996a2170
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.assignees
-    - node.type.issue
-id: node.issue.assignees
-field_name: assignees
+    - field.storage.node.issues
+    - node.type.release
+id: node.release.issues
+field_name: issues
 entity_type: node
-bundle: issue
-label: Assignees
+bundle: release
+label: Issues
 description: ''
 required: false
 translatable: false
@@ -19,7 +19,7 @@ settings:
   handler: views
   handler_settings:
     view:
-      view_name: assignees
-      display_name: assignees
+      view_name: issues
+      display_name: issues_for_release
       arguments: {  }
 field_type: entity_reference

@@ -1,45 +1,27 @@
-uuid: 520a6dfe-35b6-450b-89b9-f9034e86ef38
+uuid: b45d389c-96b9-4bc6-8165-0369ffdbb662
 langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.issue.assignees
-    - field.field.node.issue.body
-    - field.field.node.issue.comments
-    - field.field.node.issue.estimate
-    - field.field.node.issue.issues_type
-    - field.field.node.issue.project
-    - field.field.node.issue.sprint
-    - field.field.node.issue.work
-    - node.type.issue
+    - field.field.node.release.body
+    - field.field.node.release.issues
+    - field.field.node.release.project
+    - node.type.release
   module:
-    - comment
     - text
-id: node.issue.default
+id: node.release.default
 targetEntityType: node
-bundle: issue
+bundle: release
 mode: default
 content:
-  assignees:
-    weight: 10
-    settings: {  }
-    third_party_settings: {  }
-    type: options_buttons
-    region: content
   body:
     type: text_textarea_with_summary
-    weight: 13
+    weight: 7
     settings:
-      rows: 9
-      summary_rows: 3
+      rows: 5
       placeholder: ''
+      summary_rows: 1
     third_party_settings: {  }
-    region: content
-  comments:
-    weight: 26
-    settings: {  }
-    third_party_settings: {  }
-    type: comment_default
     region: content
   created:
     type: datetime_timestamp
@@ -47,18 +29,14 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-  estimate:
-    weight: 11
+  issues:
+    weight: 9
     settings:
+      match_operator: CONTAINS
+      size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: number
-    region: content
-  issues_type:
-    weight: 7
-    settings: {  }
-    third_party_settings: {  }
-    type: options_buttons
+    type: entity_reference_autocomplete
     region: content
   langcode:
     type: language_select
@@ -69,9 +47,12 @@ content:
     third_party_settings: {  }
   project:
     weight: 8
-    settings: {  }
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
     third_party_settings: {  }
-    type: options_select
+    type: entity_reference_autocomplete
     region: content
   promote:
     type: boolean_checkbox
@@ -80,15 +61,6 @@ content:
     weight: 4
     region: content
     third_party_settings: {  }
-  sprint:
-    weight: 9
-    settings:
-      match_operator: CONTAINS
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: entity_reference_autocomplete_tags
-    region: content
   status:
     type: boolean_checkbox
     settings:
@@ -120,11 +92,4 @@ content:
       placeholder: ''
     region: content
     third_party_settings: {  }
-  work:
-    weight: 12
-    settings:
-      placeholder: ''
-    third_party_settings: {  }
-    type: number
-    region: content
 hidden: {  }
