@@ -1,7 +1,7 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
     "content-hash": "e06e69fa44994840003b74cd4da606b7",
@@ -1032,7 +1032,7 @@
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/chatbot_api",
-                "reference": "bc98ea2032445f11f80f72fb880a85a5ee34dd0a"
+                "reference": "bffec07d388dd7ec06f9a78b8b16aeae0bccb312"
             },
             "require": {
                 "drupal/core": "~8.0"
@@ -1047,8 +1047,8 @@
                     "dev-1.x": "1.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-1.0-alpha1+1-dev",
-                    "datestamp": "1513610450",
+                    "version": "8.x-1.0-rc01+4-dev",
+                    "datestamp": "1523814480",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Project has not opted into security advisory coverage!"
@@ -1078,7 +1078,7 @@
                 "source": "http://cgit.drupalcode.org/chatbot_api",
                 "issues": "https://www.drupal.org/project/issues/chatbot_api"
             },
-            "time": "2017-12-18T15:09:13+00:00"
+            "time": "2018-04-15T17:47:25+00:00"
         },
         {
             "name": "drupal/config_filter",
