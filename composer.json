@@ -52,12 +52,12 @@
     "drupal/search_api": "^1.7",
     "drupal/search_api_solr": "^1.2",
     "drupal/search_api_solr_multilingual": "^1.1",
-    "drupal/taxonomy_unique": "^2.0"
+    "drupal/taxonomy_unique": "^2.0",
+    "jcalderonzumba/gastonjs": "~v1.2.0"
   },
   "require-dev": {
     "behat/mink": "~1.7",
     "behat/mink-goutte-driver": "~1.2",
-    "jcalderonzumba/gastonjs": "~1.0.2",
     "jcalderonzumba/mink-phantomjs-driver": "~0.3.1",
     "mikey179/vfsstream": "~1.2",
     "phpunit/phpunit": ">=4.8.28 <5",
